@@ -24,7 +24,7 @@ jobs:
       - name: Setup test database
         env:
           RAILS_ENV: test
-          DATABASE_URL: postgres://bguban_test:secret@postgres/bguban_test
+          DATABASE_URL: postgres://bguban_test:secret@localhost/bguban_test
         run: |
           bin/rails db:schema:load
 
