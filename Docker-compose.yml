@@ -7,14 +7,14 @@ services:
     tty: true
     container_name: web
     environment:
-      DATABASE_URL: postgres://bguban_test:secret@postgres/price_manager
+      DATABASE_URL: postgres://bguban_test:secret@postgres/bguban_test
 #    command: bash -c "bundle exec rails db:migrate && bundle exec rspec"
   postgres:
     image: "postgres:14.1"
     environment:
       POSTGRES_USER: bguban_test
       POSTGRES_PASSWORD: secret
-      POSTGRES_DB: price_manager
+      POSTGRES_DB: bguban_test
     ports:
       - 5432:5432
 #  redis:
